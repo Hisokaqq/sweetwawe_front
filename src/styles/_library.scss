@@ -1,0 +1,128 @@
+.library {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    height: 100%;
+    background: white;
+    box-shadow: 2px 2px 50px rgb(204, 204, 204);
+    overflow: scroll;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all .5s ease;
+    z-index: 5;
+
+
+    .first-line {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        h2,
+        .arrow {
+            padding: 2rem;
+        }
+
+        .arrow {
+            transition: all .5s;
+            scale: 2;
+
+            &:hover {
+                color: #f25d8a;
+            }
+        }
+    }
+
+    h3,
+    h4 {
+        transition: all .5s ease;
+    }
+
+
+}
+
+
+.l {
+    &:hover {
+        background: #f2c3d2;
+    }
+}
+
+
+
+.library-song {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem 1rem 2rem;
+    transition: all .5s ease;
+
+    img {
+        width: 30%
+    }
+
+
+
+    .song-description {
+        padding-left: 1rem;
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        h4 {
+            font-size: .7rem;
+        }
+    }
+}
+
+.selected {
+
+    background: #f25d8a;
+
+    h4 {
+
+        color: #e3dede;
+    }
+
+    h3 {
+        color: white;
+    }
+}
+
+.active-library {
+    transform: translateX(0%);
+    opacity: 1;
+
+
+}
+
+
+
+
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.7);
+    border-radius: 20px;
+    border: transparent;
+}
+
+@media screen and (max-width: 1000px) {
+    .library {
+        width: 100%;
+    }
+}

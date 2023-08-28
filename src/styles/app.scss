@@ -1,0 +1,148 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none;
+}
+
+body,
+html {
+
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    cursor: none;
+}
+
+body {
+    height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+    color: rgb(54, 54, 54)
+}
+
+h3,
+h4 {
+    font-weight: 400;
+    color: rgb(100, 100, 100)
+}
+
+.App {
+    transition: all .5s ease;
+    overflow-x: hidden;
+
+}
+
+.active-btn {
+    color: #fe4880;
+}
+
+.library-active {
+    transform: translateX(10%);
+    overflow: hidden;
+
+
+}
+
+
+
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes bgUp {
+    from {
+        background-color: transparent;
+    }
+
+    to {
+        background-color: black;
+    }
+}
+
+@keyframes bgDown {
+    from {
+        background-color: black;
+    }
+
+    to {
+        background-color: transparent;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes scaleDown {
+    from {
+        transform: scale(1.5);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes translateLeftDot {
+    from {
+        transform: translate(20px, -50%);
+    }
+
+    to {
+        transform: translate(0px, -50%);
+    }
+}
+
+@keyframes translateRightDot {
+    from {
+        transform: translate(-20px, -50%);
+    }
+
+    to {
+        transform: translate(0px, -50%);
+    }
+}
+
+
+
+@import "./player";
+@import "./song";
+@import "./library";
+@import "./nav";
+@import "./login";
+@import "./slider";
+@import "./loader";
+@import "./background";
+@import "./cursor";
+@import "./message";
+@import "./profile";
